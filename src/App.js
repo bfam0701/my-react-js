@@ -1,7 +1,4 @@
-import Content from "./Content";
-import "./App.css"
-import { useContext } from "react";
-import { ThemeContext } from "./ColorContext";
+
 
 
 // function App() {
@@ -77,15 +74,13 @@ import { ThemeContext } from "./ColorContext";
 
 function App() {
 
-    const context = useContext(ThemeContext)
 
 
     return (
-        <div style={{ padding: 20 }}>
-            <button onClick={context.toggleTheme}>Toggle theme</button>
-            <Content />
+        <div>
+
         </div>
-    );
+    )
 }
 
 export default App;
