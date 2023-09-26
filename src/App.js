@@ -1,24 +1,91 @@
-import logo from './logo.svg';
-import './App.css';
+import Content from "./Content";
+import "./App.css"
+import { useContext } from "react";
+import { ThemeContext } from "./ColorContext";
+
+
+// function App() {
+
+//     const [name, setName] = useState("")
+//     const [price, setPrice] = useState("")
+//     const [products, setProducts] = useState([])
+
+//     const nameRef = useRef()
+
+
+//     const handleSubmit = () => {
+//         console.log(price)
+//         setProducts([...products, {
+//             name,
+//             price: parseInt(price)
+//         }])
+//         setName("")
+//         setPrice("")
+
+//         nameRef.current.focus()
+//     }
+
+//     const total = useMemo(() => {
+//         const alltotal = products.reduce((products, index) => {
+
+//             return products + index.price
+//         }, 0)
+
+//         return alltotal
+//     }, [products])
+
+//     return (
+//         <div style={{ padding: 20 }}>
+
+//             <input
+//                 ref={nameRef}
+//                 value={name}
+//                 placeholder="Enter Name"
+//                 onChange={e => setName(e.target.value)}
+//             />
+
+//             <br />
+//             <input
+//                 value={price}
+//                 placeholder="Enter Price"
+//                 onChange={e => setPrice(e.target.value)}
+//             />
+//             <br />
+//             <button onClick={handleSubmit}>Add</button>
+//             <p>Total: {total}</p>
+
+//             <ul>
+//                 {products.map((product, i) => (
+//                     <li key={i}>{product.name} - {product.price}</li>
+//                 ))}
+//             </ul>
+
+
+//         </div>
+//     )
+// }
+
+// export default App;
+
+// innit
+
+
+
+// Acction
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Quốc Bảo
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const context = useContext(ThemeContext)
+
+
+    return (
+        <div style={{ padding: 20 }}>
+            <button onClick={context.toggleTheme}>Toggle theme</button>
+            <Content />
+        </div>
+    );
 }
+
 export default App;
