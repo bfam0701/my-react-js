@@ -1,10 +1,12 @@
-
+import "./Slidebar.scss"
 
 
 
 function Slidebar() {
     return (
-        <h2>Slidebar</h2>
+        <aside className="slidebar">
+            <h2>Slidebar</h2>
+        </aside>
     )
 
 }

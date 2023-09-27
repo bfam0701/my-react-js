@@ -1,10 +1,14 @@
-
-
+import "./Header.scss"
 
 
 function Header() {
     return (
-        <h2>Header</h2>
+        <h2 className="wrapper">
+            <div className="inner">
+
+            </div>
+
+        </h2>
     )
 
 }
