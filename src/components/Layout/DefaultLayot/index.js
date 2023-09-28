@@ -1,6 +1,5 @@
 import Header from "../component/Header";
 import Slidebar from "./Slidebar";
-import "./DefaultLayout.scss"
 
 function DefaultLayout({ children }) {
     return (
